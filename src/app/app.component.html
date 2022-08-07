@@ -1,17 +1,22 @@
-<div class="container-fluid bg-primary p-3">
-  <h1 class="text-white">Welcome to {{ title }}</h1>
-</div>
-<div class="dropdown">
-  <button
-    class="btn btn-primary dropdown-toggle"
-    type="button"
-    data-bs-toggle="dropdown"
-    aria-expanded="false">
-    Dropdown one
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Dropdown item</a></li>
-    <li><a class="dropdown-item" href="#">Dropdown item</a></li>
-    <li><a class="dropdown-item" href="#">Dropdown item</a></li>
-  </ul>
-</div>
+<section class="container-fluid bg-primary p-3 text-white">
+  <h1>Welcome to {{ title }}</h1>
+  <nav class="row">
+    <a class="col btn btn-dark text-white m-1 p-1" routerLink="/frontpage"
+      >Frontpage</a
+    >
+    <a class="col btn btn-dark text-white m-1 p-1" routerLink="/livestreams"
+      >Lives</a
+    >
+    <a class="col btn btn-dark text-white m-1 p-1" routerLink="/matches"
+      >Matches</a
+    >
+    <a class="col btn btn-dark text-white m-1 p-1" routerLink="/teams">Teams</a>
+    <a class="col btn btn-dark text-white m-1 p-1" routerLink="/standings"
+      >Standings</a
+    >
+  </nav>
+</section>
+
+<section class="container pt-3">
+  <router-outlet></router-outlet>
+</section>
