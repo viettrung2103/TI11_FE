@@ -11,6 +11,9 @@ import { UsersComponent } from './components/users/users.component';
 import { StandingsComponent } from './components/standings/standings.component';
 import { LivestreamsComponent } from './components/livestreams/livestreams.component';
 import { MatchesComponent } from './components/matches/matches.component';
+import { TeamListComponent } from './components/teams/components/team-list/team-list.component';
+import { TeamDetailComponent } from './components/teams/components/team-detail/team-detail.component';
+import { TeamDeleteComponent } from './components/teams/components/team-delete/team-delete.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { MatchesComponent } from './components/matches/matches.component';
     StandingsComponent,
     LivestreamsComponent,
     MatchesComponent,
+    TeamListComponent,
+    TeamDetailComponent,
+    TeamDeleteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
