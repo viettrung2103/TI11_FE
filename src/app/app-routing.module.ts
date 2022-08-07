@@ -14,7 +14,6 @@ const routes: Routes = [
   { path: 'standings', component: StandingsComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }, //if there is no address, redirect to frontpage
   { path: '**', component: FrontpageComponent, pathMatch: 'full' }, // default page if visit wrong address
-  { path: '**', component: FrontpageComponent, pathMatch: 'full' }, // default page if visit wrong address
 ];
 
 @NgModule({
