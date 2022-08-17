@@ -1,0 +1,20 @@
+{
+  "players":[
+    {
+      "playerId":1, "name": "Trung", "teamId":1
+    }
+  ],
+  "teams":[
+    {"teamId":1,
+    "name":"T1",
+    "players":[
+      {"id":1,
+      "name":"Trung",
+      "role":"main"
+      },
+      {"id":2,
+      "name":""},
+      {"id":3}]
+      }],
+  "matches":[]
+}

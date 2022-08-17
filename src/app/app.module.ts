@@ -14,6 +14,8 @@ import { MatchesComponent } from './components/matches/matches.component';
 import { TeamListComponent } from './components/teams/components/team-list/team-list.component';
 import { TeamDetailComponent } from './components/teams/components/team-detail/team-detail.component';
 import { TeamDeleteComponent } from './components/teams/components/team-delete/team-delete.component';
+import { CreateTeamComponent } from './components/teams/components/create-team/create-team.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,10 @@ import { TeamDeleteComponent } from './components/teams/components/team-delete/t
     TeamListComponent,
     TeamDetailComponent,
     TeamDeleteComponent,
+    CreateTeamComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
+  exports: [FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

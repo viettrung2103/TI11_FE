@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://crudcrud.com/api/aec7378cb4e046b2ad9f29fd6579962e',
+  apiUrl: 'https://crudcrud.com/api/b03e7ddf6de244d6bf6c5037c01401f4',
+  // apiUrl: 'localhost:xxxx/v1', // back-end server on the localhost
 };
 
 /*

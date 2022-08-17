@@ -1,1 +1,87 @@
-<p>create-team works!</p>
+<section>
+  <form
+    #registerForm="ngForm"
+    (ngSubmit)="onSubmit(registerForm)"
+    [noValidate]="false">
+    <div class="input-group m-2 p-1">
+      <div class="input-group-text">
+        <span class="input-group-text">Enter Team Name</span>
+      </div>
+      <input
+        name="team_name"
+        type="text"
+        class="form-control"
+        placeholder="Team Name"
+        [(ngModel)]="team.teamName" />
+    </div>
+    <div class="input-group m-2 p-1">
+      <div class="input-group-text">
+        <span class="input-group-text">Enter tag</span>
+      </div>
+      <input
+        name="tag"
+        type="text"
+        class="form-control"
+        placeholder="tag"
+        [(ngModel)]="team.tag" />
+    </div>
+    <div class="input-group m-2 p-1">
+      <div class="input-group-text">
+        <span class="input-group-text">Enter Region</span>
+      </div>
+      <select name="region" class="form-control" [(ngModel)]="team.region">
+        <ng-container *ngFor="let regionType of regionTypes">
+          <option [value]="regionType">{{ regionType }}</option>
+        </ng-container>
+      </select>
+    </div>
+    <div class="input-group m-2 p-1">
+      <div class="input-group-text">
+        <span class="input-group-text">Enter Players</span>
+      </div>
+      <input
+        name="players"
+        type="text"
+        class="form-control"
+        placeholder="players"
+        [(ngModel)]="team.players" />
+    </div>
+    <div class="input-group m-2 p-1">
+      <div class="input-group-text">
+        <span class="input-group-text">Enter Wins</span>
+      </div>
+      <input
+        name="wins"
+        type="text"
+        class="form-control"
+        placeholder="wins"
+        [(ngModel)]="team.wins" />
+    </div>
+    <div class="input-group m-2 p-1">
+      <div class="input-group-text">
+        <span class="input-group-text">Enter losses</span>
+      </div>
+      <input
+        name="losses"
+        type="text"
+        class="form-control"
+        placeholder="losses"
+        [(ngModel)]="team.losses" />
+    </div>
+    <div class="input-group m-2 p-1">
+      <div class="input-group-text">
+        <span class="input-group-text">Image Link</span>
+      </div>
+      <input
+        name="image"
+        class="form-control"
+        type="url"
+        [(ngModel)]="team.image" />
+    </div>
+    <div class="input-group m-2 p-1">
+      <button type="submit" class="btn btn-primary text-white col">
+        Create Account
+      </button>
+    </div>
+  </form>
+</section>
