@@ -13,38 +13,34 @@ import Swal from 'sweetalert2';
   styleUrls: ['./create-team.component.css'],
 })
 export class CreateTeamComponent implements OnInit {
-  team: Team = new Team('', '', RegionType.DEFAULT, [], 0, 0);
-
   regionTypes: string[] = Object.keys(RegionType);
 
-  constructor(private teamApiService: TeamApiService, public router: Router) {}
+  constructor(public router: Router) {}
 
   ngOnInit(): void {}
 
-  onSubmit(formData: NgForm) {
-    this.teamApiService
-      .create(formData.value as Team)
-      .then(async response => {
-        const createdTeam = await response.json();
-        alert(createdTeam.name + ' was created successfully');
-        this.router.navigate(['/teams-list']).catch(console.log);
-      })
-      .catch(error => {
-        alert('Problem while creating product');
-        console.log(error);
-      });
-  }
+  // onSubmit(formData: NgForm) {
   //   this.teamApiService.create(formData.value as Team).subscribe({
+  //     // like .then and .catch in promise
   //     next: (apiResponse: ApiResponse) => {
+  //       //show message
   //       Swal.fire({
   //         icon: 'success',
   //         text: apiResponse.message,
   //       });
+  //       //redirect to some linkn
   //       if (apiResponse.statusCode === 201) {
-  //         // can also write void this.router.navigateByUrl('/login');
-  //         // or this.router.navigateByUrl('/login').catch(console.log);
-  //         this.router.navigateByUrl('/login');
+  //         //the navigateByUrl is promise, so need either .then or .catch
+  //         // without .catch, or .then, it will show problem
+  //         // since there is no action after so it is no use to use .then
+  //         // can use .catch to catch error, add this step to complete this code ( in case sth is fail)
+  //         // Moreover, we can add void like below, meaning we dont expect anything in return, just want the redirect
+  //         // void this.router.navigateByUrl('/login').catch(console.log);
+  //         void this.router.navigateByUrl('/teams/team-list').catch(console.log);
+  //         this.router.navigateByUrl('/teams/team-list').catch(console.log);
+  //         return;
   //       }
+  //       ///show message about problem
   //     },
   //     error: (err: HttpErrorResponse) => {
   //       Swal.fire({
@@ -53,18 +49,5 @@ export class CreateTeamComponent implements OnInit {
   //       });
   //     },
   //   });
-  // }
-  //     next: (apiResponse:ApiResponse) =>{
-  //       const createdTeam = await.response.json();
-  //       alert(`team ${createdTeam..teamName} is created successfully`);
-  //       if (apiResponse === 201) {
-  //         this.router.navigateByUrl(['/teams-list']);
-  //       }
-  //     },
-  //     error: (err:HttpErrorResponse => {
-  //       alert ("Problem while creating Team"):
-  //       console.log(err.error.message);
-  //     },)
-  //   })
   // }
 }

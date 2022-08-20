@@ -4,39 +4,31 @@ import { Team } from '../models/team-class.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ApiResponse } from '../models/api-response.model';
+import { ThisReceiver } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TeamApiService {
-  private apiUrl = environment.apiUrl;
-  teamsEndpoint = '/teams';
+  private apiUrl: string = environment.apiUrl;
+  private teamsEndpoint: string = '/teams';
+  private teamIdEndpoint: string = '/:teamId';
+
+  private createTeamEndpoint: string = '/create';
+  private deleteTeamEndpoint: string = '/delete';
 
   constructor(private httpClient: HttpClient) {}
 
-  create(team: Team): Promise<Response> {
-    return fetch(this.apiUrl + this.teamsEndpoint, {
-      headers: {
-        // eslint-disable-next-line prettier/prettier
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-      body: JSON.stringify(team),
-    });
+  // create(team: Team): Observable<ApiResponse> {
+  //   return this.httpClient.post<ApiResponse>(
+  //     this.apiUrl + this.teamsEndpoint + this.createTeamEndpoint,
+  //     team
+  //   );
+  // }
+  //fetch teams list
+  getTeams(): Observable<ApiResponse> {
+    return this.httpClient.get<ApiResponse>(this.apiUrl + this.teamsEndpoint);
   }
-  // this.httpClient.post<ApiResponse>(this.apiUrl + this.createUserEndpoint, user)
 }
-
-//   getAll(): Promise<Response> {
-//     return;
-//     // fetch(
-//     //   this.baseUrl + this.teamsEndpoint,
-//     //   {
-//     //     method: 'GET',
-//     //     headers: {
-//     //       'Accept': 'application/json',
-//     //       'Content-Type': 'application/json'
-//     //     }
-//     //   }
-//     // )
+//   getTeamsById(teamId:string): Observable<ApiResponse
+// }

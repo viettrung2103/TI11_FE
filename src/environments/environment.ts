@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://crudcrud.com/api/b03e7ddf6de244d6bf6c5037c01401f4',
+  apiUrl: 'http://localhost:8080',
   // apiUrl: 'localhost:xxxx/v1', // back-end server on the localhost
 };
 

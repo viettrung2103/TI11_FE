@@ -1,4 +1,6 @@
-<section>
+<h1>This is Create Team</h1>
+
+<!-- <section>
   <form
     #registerForm="ngForm"
     (ngSubmit)="onSubmit(registerForm)"
@@ -8,11 +10,12 @@
         <span class="input-group-text">Enter Team Name</span>
       </div>
       <input
-        name="team_name"
+        name="teamName"
         type="text"
         class="form-control"
         placeholder="Team Name"
-        [(ngModel)]="team.teamName" />
+        required
+        ngModel />
     </div>
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
@@ -23,13 +26,13 @@
         type="text"
         class="form-control"
         placeholder="tag"
-        [(ngModel)]="team.tag" />
+        ngModel />
     </div>
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
         <span class="input-group-text">Enter Region</span>
       </div>
-      <select name="region" class="form-control" [(ngModel)]="team.region">
+      <select name="region" class="form-control" [(ngModel)]="region">
         <ng-container *ngFor="let regionType of regionTypes">
           <option [value]="regionType">{{ regionType }}</option>
         </ng-container>
@@ -84,4 +87,4 @@
       </button>
     </div>
   </form>
-</section>
+</section> -->

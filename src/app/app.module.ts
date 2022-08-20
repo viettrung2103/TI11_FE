@@ -16,6 +16,7 @@ import { TeamDetailComponent } from './components/teams/components/team-detail/t
 import { TeamDeleteComponent } from './components/teams/components/team-delete/team-delete.component';
 import { CreateTeamComponent } from './components/teams/components/create-team/create-team.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,13 @@ import { FormsModule } from '@angular/forms';
     TeamDeleteComponent,
     CreateTeamComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   exports: [FormsModule],
   providers: [],
   bootstrap: [AppComponent],
