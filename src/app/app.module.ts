@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -5,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FrontpageComponent } from './components/frontpage/frontpage.component';
-import { TeamsComponent } from './components/teams/teams.component';
 import { PlayersComponent } from './components/players/players.component';
 import { UsersComponent } from './components/users/users.component';
 import { StandingsComponent } from './components/standings/standings.component';
@@ -16,13 +16,15 @@ import { TeamDetailComponent } from './components/teams/components/team-detail/t
 import { TeamDeleteComponent } from './components/teams/components/team-delete/team-delete.component';
 import { CreateTeamComponent } from './components/teams/components/create-team/create-team.component';
 import { FormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
+import { TeamsComponent } from './components/teams/teams.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FrontpageComponent,
-    TeamsComponent,
+    TeamListComponent,
     PlayersComponent,
     UsersComponent,
     StandingsComponent,
@@ -32,14 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     TeamDetailComponent,
     TeamDeleteComponent,
     CreateTeamComponent,
+    TeamsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FormsModule,
-    HttpClientModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule, HttpClientModule],
   exports: [FormsModule],
   providers: [],
   bootstrap: [AppComponent],

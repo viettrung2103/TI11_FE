@@ -9,13 +9,13 @@ export enum RegionType {
 }
 
 export interface Iteam {
-  team_id?: string;
+  teamId?: string;
   teamName: string;
   tag: string;
   region: RegionType;
   wins: number;
   losses: number;
-  image?: string;
+  imageUrl?: string;
   createAt: string;
   lastMatchTime: string;
 }

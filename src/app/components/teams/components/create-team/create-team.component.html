@@ -1,4 +1,5 @@
-<h1>This is Create Team</h1>
+<!-- eslint-disable prettier/prettier -->
+<h1>Create Team works</h1>
 
 <!-- <section>
   <form
@@ -10,12 +11,11 @@
         <span class="input-group-text">Enter Team Name</span>
       </div>
       <input
-        name="teamName"
+        name="team_name"
         type="text"
         class="form-control"
         placeholder="Team Name"
-        required
-        ngModel />
+        [(ngModel)]="team.teamName" />
     </div>
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
@@ -26,13 +26,13 @@
         type="text"
         class="form-control"
         placeholder="tag"
-        ngModel />
+        [(ngModel)]="team.tag" />
     </div>
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
         <span class="input-group-text">Enter Region</span>
       </div>
-      <select name="region" class="form-control" [(ngModel)]="region">
+      <select name="region" class="form-control" [(ngModel)]="team.region">
         <ng-container *ngFor="let regionType of regionTypes">
           <option [value]="regionType">{{ regionType }}</option>
         </ng-container>

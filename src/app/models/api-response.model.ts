@@ -1,5 +1,6 @@
 export interface ApiResponse {
-  statusCode: number;
+  status: number;
   message: string;
+  length?: number;
   data: any;
 }

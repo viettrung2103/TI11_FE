@@ -63,11 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "TI11-coverage:build:production",
-              "proxyConfig": "src/proxy.conf.json"
+              "browserTarget": "TI11-coverage:build:production"
             },
             "development": {
-              "browserTarget": "TI11-coverage:build:development","proxyConfig": "src/proxy.conf.json"
+              "browserTarget": "TI11-coverage:build:development"
             }
           },
           "defaultConfiguration": "development"
