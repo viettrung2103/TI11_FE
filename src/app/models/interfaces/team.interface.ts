@@ -8,14 +8,18 @@ export enum RegionType {
   SEA = 'SOUTHEAST ASIA',
 }
 
-export interface Iteam {
-  teamId?: string;
+export interface Team {
+  teamId: TeamId;
   teamName: string;
   tag: string;
   region: RegionType;
   wins: number;
   losses: number;
-  imageUrl?: string;
+  imageUrl: string;
   createAt: string;
-  lastMatchTime: string;
+  lastMatchAt: string;
+}
+
+export interface TeamId {
+  teamId: string | number;
 }

@@ -3,8 +3,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApiResponse } from 'src/app/models/api-response.model';
-import { RegionType, Team } from 'src/app/models/team-class.model';
 import { TeamApiService } from 'src/app/services/team-api.service';
 import Swal from 'sweetalert2';
 

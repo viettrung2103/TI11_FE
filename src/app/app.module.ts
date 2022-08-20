@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { TeamsComponent } from './components/teams/teams.component';
+import { ActivatedRoute, Router, ParamMap} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { TeamsComponent } from './components/teams/teams.component';
     CreateTeamComponent,
     TeamsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule, HttpClientModule ],
   exports: [FormsModule],
   providers: [],
   bootstrap: [AppComponent],
