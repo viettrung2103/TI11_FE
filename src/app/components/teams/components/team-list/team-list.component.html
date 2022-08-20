@@ -9,21 +9,17 @@
 <table *ngIf="teams" class="table table-striped">
   <thead class="table-light">
     <th class="col">teamId</th>
-    <th class="col">teamName</th>
     <th class="col">tag</th>
     <th class="col">region</th>
     <th class="col">wins</th>
     <th class="col">losses</th>
     <th class="col">imageUrl</th>
-    <th class="col">createAt</th>
-    <th class="col">lastMatchAt</th>
   </thead>
   <tbody>
     <ng-container *ngFor="let team of teams">
       <tr>
         <!-- angular interpolation -->
         <td>{{ team.teamId }}</td>
-        <td>{{ team.teamName }}</td>
         <td>{{ team.tag }}</td>
         <td>{{ team.region }}</td>
         <td>{{ team.wins }}</td>
@@ -32,8 +28,7 @@
           <!-- This is data binding, binding this html src property with our data -->
           <img [src]="team.imageUrl || 'assets/team/default-team-logo.png'" />
         </td>
-        <td>{{ team.createAt }}</td>
-        <td>{{ team.lastMatchAt }}</td>
+
         <!-- When clicking this button, routing to teams/teamId -->
         <td>
           <button
