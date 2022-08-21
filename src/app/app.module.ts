@@ -15,7 +15,7 @@ import { TeamListComponent } from './components/teams/components/team-list/team-
 import { TeamDetailComponent } from './components/teams/components/team-detail/team-detail.component';
 import { TeamDeleteComponent } from './components/teams/components/team-delete/team-delete.component';
 import { CreateTeamComponent } from './components/teams/components/create-team/create-team.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { TeamsComponent } from './components/teams/teams.component';
@@ -37,7 +37,7 @@ import { ActivatedRoute, Router, ParamMap} from '@angular/router';
     CreateTeamComponent,
     TeamsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule, HttpClientModule ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule, HttpClientModule,ReactiveFormsModule ],
   exports: [FormsModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -41,3 +41,8 @@ export class Team {
     this.lastMatchTime = lastMatchTime || new Date().toISOString();
   }
 }
+
+export regionTypesToArray(enum){
+  return Object.keys(enum
+    .filter(StringIs));
+}

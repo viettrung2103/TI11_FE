@@ -1,90 +1,81 @@
-<!-- eslint-disable prettier/prettier -->
 <h1>Create Team works</h1>
 
-<!-- <section>
-  <form
-    #registerForm="ngForm"
-    (ngSubmit)="onSubmit(registerForm)"
-    [noValidate]="false">
+<section>
+  Create Team Form:
+  <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
         <span class="input-group-text">Enter Team Name</span>
       </div>
       <input
+        formControlName="teamName"
         name="team_name"
         type="text"
         class="form-control"
-        placeholder="Team Name"
-        [(ngModel)]="team.teamName" />
+        placeholder="Team Name" />
     </div>
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
         <span class="input-group-text">Enter tag</span>
       </div>
       <input
+        formControlName="tag"
         name="tag"
         type="text"
         class="form-control"
-        placeholder="tag"
-        [(ngModel)]="team.tag" />
+        placeholder="tag" />
     </div>
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
         <span class="input-group-text">Enter Region</span>
       </div>
-      <select name="region" class="form-control" [(ngModel)]="team.region">
-        <ng-container *ngFor="let regionType of regionTypes">
-          <option [value]="regionType">{{ regionType }}</option>
+      <select formControlName="region" name="region" class="form-control">
+        <ng-container *ngFor="let region of regions">
+          <option [value]="region">{{ region }}</option>
         </ng-container>
       </select>
     </div>
-    <div class="input-group m-2 p-1">
-      <div class="input-group-text">
-        <span class="input-group-text">Enter Players</span>
-      </div>
-      <input
-        name="players"
-        type="text"
-        class="form-control"
-        placeholder="players"
-        [(ngModel)]="team.players" />
-    </div>
+
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
         <span class="input-group-text">Enter Wins</span>
       </div>
       <input
+        formControlName="wins"
         name="wins"
         type="text"
         class="form-control"
-        placeholder="wins"
-        [(ngModel)]="team.wins" />
+        placeholder="wins" />
     </div>
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
         <span class="input-group-text">Enter losses</span>
       </div>
       <input
+        formControlName="losses"
         name="losses"
         type="text"
         class="form-control"
-        placeholder="losses"
-        [(ngModel)]="team.losses" />
+        placeholder="losses" />
     </div>
     <div class="input-group m-2 p-1">
       <div class="input-group-text">
         <span class="input-group-text">Image Link</span>
       </div>
       <input
+        formControlName="imageUrl"
         name="image"
         class="form-control"
         type="url"
-        [(ngModel)]="team.image" />
+        placeholder="Image Link" />
     </div>
     <div class="input-group m-2 p-1">
-      <button type="submit" class="btn btn-primary text-white col">
+      <button
+        type="submit"
+        class="btn btn-primary text-white col"
+        [disabled]="!teamForm.valid">
         Create Account
       </button>
     </div>
   </form>
-</section> -->
+</section>
