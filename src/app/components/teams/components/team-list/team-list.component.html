@@ -26,7 +26,9 @@
         <td>{{ team.losses }}</td>
         <td>
           <!-- This is data binding, binding this html src property with our data -->
-          <img [src]="team.imageUrl || 'assets/team/default-team-logo.png'" />
+          <img
+            class="team-logo"
+            [src]="team.imageUrl || 'assets/teams/default-team-logo.png'" />
         </td>
 
         <!-- When clicking this button, routing to teams/teamId -->

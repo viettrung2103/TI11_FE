@@ -29,7 +29,10 @@ export class CreateTeamComponent implements OnInit {
       region:['',Validators.required],
       wins:['',Validators.required],
       losses:['',Validators.required],
-      imageUrl:['',Validators.required]
+      imageUrl:['',Validators.required],
+      // createAt:['',Validators.required],
+      // lastMatchAt:['',Validators.required],
+
     })
   }
 
